@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavad Gita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <form class="menu__box" method="post" action="/chapter">
+                <h2 class="menuHeading">Chapters</h2>
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 1">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 2">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 3">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 4">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 5">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 6">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 7">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 8">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 9">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 10">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 11">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 12">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 13">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 14">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 15">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 16">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 17">
+                <input type="submit" class="menu__item" name="chapter" value="Chapter 18">
+        </form>
+      </div>
+
+    <section class="topContainer">
+        <h3>Chapter <%= locals.chapterNumber %> </h3>
+        <h1><%= locals.chapterName %></h1>
+        <p class="chapterSummary"><%= locals.chapterSummary %></p>
+        <hr>
+        <p class="versesCounter"><%= locals.slokArray.length %> Verses</p>
+        <hr>
+        <%if (locals.slokArray) { %>
+            <% for(let i = 0; i < locals.slokArray.length; i++) { %>
+                <div class="verseContainer">
+                    <p class="verseNumber">VERSE <%= i+1 %></p>
+                    <p class="verseData"><%= locals.slokArray[i] %></p>
+                </div>            
+        <% } %>
+        <% } %>
+    </section>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.topContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6rem 2rem;
+    
+}
+
+.topContainer > * {
+    width: 80%;
+    text-align: center;
+
+}
+
+.versesCounter {
+  font-weight: 700;
+}
+
+
+.versesCounter, p, .chapterSummary {
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.chapterSummary {
+  padding-bottom: 3rem;
+}
+
+h3, .verseNumber {
+  color: #f57903;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.verseContainer {
+    box-sizing: border-box;
+    display: grid;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 20px;
+    grid-template-columns: auto 2fr;
+    justify-items: start;
+}
+
+.verseData {
+    padding-left: 10px;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Menu */
+
+.hamburger-menu {
+    position: absolute;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+}
+.menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #9DA3AE;
+  transition-duration: .25s;
+}
+
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 30px 0;
+    list-style: none;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+  .menu__item {
+    cursor: pointer;
+    display: block;
+    padding: 12px 24px;
+    color: #9DA3AE;
+    background-color: #ffffff;
+    font-size: 1rem;
+    transition-duration: .25s;
+    width: 100%;
+    border: none;
+    text-align: left;
+  }
+
+  .menuHeading {
+    padding: 12px 24px;
+  }
+
+  .menu__item:hover {
+    border-left: 0.4rem solid #f57903;
+    background-color: #FDF8C9;
+  }
+
