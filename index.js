@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
 
+const date = new Date();
 const app = express();
 const port = process.env.PORT || 3000;
 let versesData = [];
@@ -34,7 +35,8 @@ async function getData(chapterNumber, res) {
                   chapterNumber: data.chapter_number,
                   chapterName: data.name_translated,
                   chapterSummary: data.chapter_summary,
-                  slokArray: versesData
+                  slokArray: versesData,
+                  currentYear: date.getFullYear()
           });
     } catch (error) {
         console.error("This is an error--->    "+error);
