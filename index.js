@@ -47,6 +47,10 @@ app.get("/", async (req, res) => {
     getData(1, res)
 })
 
+app.get("/chapter", (req, res) => {
+    res.redirect("/")
+})
+
 app.post("/chapter", (req, res) => {
     let originalString = req.body.chapter;
     const newString = originalString.replace("Chapter ", "");
