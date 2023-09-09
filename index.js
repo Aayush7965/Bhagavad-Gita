@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 let versesData = [];
 const API_KEY = "91dd75f53fmsha4a24ba49c969ccp15becajsn6b59fa268aa7"
 
