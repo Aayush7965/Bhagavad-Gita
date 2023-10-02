@@ -1,7 +1,38 @@
 body {
     margin: 0;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     font-family: 'Inter', sans-serif;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #E5E7EB;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000000;
+}
+
+#leftArrow {
+  top: 50vh;
+  left: 10px;
+}
+
+#rightArrow {
+  top: 50vh;
+  right: 10px;
+}
+
+.arrows:hover {
+  background-color: #d3d6db;
 }
 
 .footerContainer {
@@ -36,7 +67,7 @@ body {
 
 .versesCounter, p, .chapterSummary {
     font-size: 1.1rem;
-    line-height: 2.5rem;
+    line-height: 1.8rem;
     text-align: left;
 }
 
