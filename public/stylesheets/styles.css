@@ -9,6 +9,7 @@ body {
 }
 
 .arrows {
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,13 +140,14 @@ img {
     left: 0 !important;
 }
 .menu__btn {
+
     position: fixed;
     top: 20px;
     left: 20px;
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 20;
 }
 
 .menu__btn > span,
@@ -168,6 +170,7 @@ img {
     top: 8px;
   }
   .menu__box {
+    z-index: 10;
     display: block;
     position: fixed;
     top: 0;
