@@ -1,11 +1,18 @@
 body {
     margin: 0;
     background-color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
-}
+    font-family: 'Roboto', sans-serif;
+  }
 
 .hidden {
   visibility: hidden;
+}
+
+#arrowContainer {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 3% 3%;
 }
 
 .arrows {
@@ -13,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  /* position: fixed; */
   height: 40px;
   width: 40px;
   border: 1px solid #E5E7EB;
@@ -212,7 +219,7 @@ img {
 
 @media (max-width: 1024px) {
   .topContainer {
-    padding: 6rem 6%;
+    padding: 4rem 6%;
   }
   .verseContainer {
     grid-template-columns: none;

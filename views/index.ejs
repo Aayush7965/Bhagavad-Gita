@@ -6,7 +6,8 @@
     <title>Bhagavad Gita</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/cab2d1b39a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
@@ -41,12 +42,7 @@
       </div>
 
     <section class="topContainer">
-        <div>
-
-            <a href="/chapter/<%= locals.leftArrowData %>" class="arrows" id="leftArrow"><i class="fa-solid fa-angle-left"></i></a>
-            <a href="/chapter/<%= locals.rightArrowData %>" class="arrows" id="rightArrow"><i class="fa-solid fa-angle-right"></i></a>
-        </div>
-
+        
         <h3>Chapter <%= locals.chapterNumber %> </h3>
         <h1><%= locals.chapterName %></h1>
         <p class="chapterSummary"><%= locals.chapterSummary %></p>
@@ -59,8 +55,13 @@
                     <p class="verseNumber">VERSE <%= i+1 %></p>
                     <p class="verseData"><%= locals.slokArray[i] %></p>
                 </div>            
-        <% } %>
-        <% } %>
+                <% } %>
+                <% } %>
+                
+                <div id="arrowContainer">
+                    <a href="/chapter/<%= locals.leftArrowData %>" class="arrows" id="leftArrow"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="/chapter/<%= locals.rightArrowData %>" class="arrows" id="rightArrow"><i class="fa-solid fa-angle-right"></i></a>
+                </div>
     </section>
     
 <footer class="footerContainer">
